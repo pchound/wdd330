@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+   <!-- <form>
+        <label for="something">Enter something:</label>
+        <input type="text" id="something" name="something"><br><br>
+        <button type="button" onclick="myFunction()">Click Me!</button>
+        <div id="output"></div>
+      </form>
+
+
+      <form>
+        <label for="number">Enter a number</label>
+        <input type="text" id="number" name="number"><br><br>
+        <button type="button" onclick="myNumber()">Click Me!</button>
+        <div id="outputNumber"></div>
+      </form>-->
+
+
+      <form>
+        <label for="number1">Number 1</label>
+        <input type="number" id="number1" name="number1"><br><br>
+
+        <label for="number2">Number 2</label>
+        <input type="number" id="number2" name="number2"><br><br>
+
+        <button type="button" onclick="add()">Add</button>
+        <div id="sum"></div>
+      </form>
+
+    <script>
+
+        function add()
+        {
+            let number1 = Number(document.getElementById("number1").value);
+            let number2 = Number(document.getElementById("number2").value);
+
+            let sum = (number1 + number2);
+            document.getElementById('sum').innerHTML = sum;
+        }
+
+
+
+
+        function myFunction(){
+            let textBox = document.getElementById("something").value;
+            document.getElementById('output').innerHTML = textBox;
+        }
+
+        function myNumber(){
+            let number = Number(document.getElementById("number").value);
+
+            if(Number.isInteger(number)){
+            let result = addUpTo(number);
+            document.getElementById('outputNumber').innerHTML = result;
+            }
+            else{
+                document.getElementById('outputNumber').innerHTML = "Oops!";
+            }
+        }
+
+        function addUpTo(number){
+            var result = 0;
+            for (var i = number; i>0; i--){
+                console.log(i);
+                result += i;
+            }
+            return result;
+        }
+    </script>
+  </body>
+</html>

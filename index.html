@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <h1>Joseph's Portfolio</h1>
+    <ol id="list"></ol>
+    <script>
+      let link = 
+      [
+        {
+          label: "Week1 notes",
+          url: "http://www.google.com"
+        },
+        {
+          label: "Week2 notes",
+          url: "http://www.google.com"
+        }
+      ]
+  
+      let list = document.getElementById("list");
+  
+      link.forEach((link) => {
+        let li = document.createElement("li");
+        li.innerHTML = "<a href=" + link.url + ">" + link.label + "</a>";
+        list.appendChild(li);
+      });
+    </script>
+  </body>
+</html>
