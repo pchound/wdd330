@@ -1,0 +1,118 @@
+@media only screen and (min-width: 1031px)
+{
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap');
+
+    html
+    {
+    background: rgb(208,208,208);
+    background: linear-gradient(323deg, rgba(208,208,208,1) 0%, rgba(255,255,255,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+    }
+
+
+
+    body
+    {
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #shape
+    {
+        background: rgb(56,56,56);
+        background: linear-gradient(90deg, rgba(56,56,56,1) 0%, rgba(135,135,135,1) 100%);
+        clip-path: polygon(0 0, 0 100%, 100% 100%);
+        /*min-width: 100px;
+        width: 1000px;*/
+        width: 700px;
+        min-height: 600px;
+        max-height: 100%;
+
+        position: absolute;
+        top: 48%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+        
+
+    }
+
+    #logo
+    {
+        float: right;
+        width: 400px;
+        margin-top: 20px;
+        background-color: white;
+        border-radius: 15px;
+    }
+
+    #list
+    {
+        width: 200px;
+       height: 100px;
+        position: relative;
+        top: 400px;
+        left: 50px;
+       
+        font-size: 1.3em;
+        color: white;
+        text-shadow: 4px 3px 5px rgba(0,0,0,1);
+        font-family: 'IBM Plex Sans', sans-serif;
+        letter-spacing: 1px;
+    }
+
+
+
+    .li_bg
+    {
+        box-shadow:inset 0px 1px 3px 0px #91b8b3;
+        background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+        background-color:#768d87;
+        border-radius:5px;
+        border:1px solid #566963;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        
+        font-size:15px;
+        font-weight:bold;
+      
+        text-decoration:none;
+        text-shadow:0px -1px 0px #2b665e;
+
+        height: 40px;
+        width: 200px;
+        text-align: center;
+        border-radius: 7px;
+
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .li_bg:hover
+    {
+        background:linear-gradient(to bottom, #acc7c0 5%, #1a5050 100%);
+    }
+
+    .btn_text
+    {
+        position: relative;
+        top: 10px;
+    }
+
+    #visual
+    {
+        position: absolute;
+        width: 700px;
+
+        bottom: -40px;
+        opacity: 0.3;
+        
+    }
+}

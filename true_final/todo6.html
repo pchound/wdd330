@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <link rel="stylesheet" href="todo.css">
+</head>
+  
+<body>
+
+<div id="grid">
+    
+    <div>
+        <input type="text" id="user_input">
+        <button id="task_button">+</button>
+    </div>
+
+    <div id="radios">
+        <input type ="radio" id="complete" name="type" value="Complete" onclick="filter_complete()">
+        <label for="complete">Complete</label>
+    
+        
+        <input type ="radio" id="incomplete" name="type" value="Incomplete" onclick="filter_incomplete()">
+        <label for="incomplete">Incomplete</label>
+    
+        
+        <input type ="radio" id="all" name="type" value="All" onclick="rendertask_array(task_array)" checked>
+        <label for="all">All</label>
+    </div>
+
+    <div id="error"></div>
+
+    <ul id="task_list"></ul>
+</div>
+<!--<h1 id="current_temp" &deg;F></h1>
+<h1 id="feels_like"></h1>
+<h1 id="description"></h1>
+<h1 id="humidity"></h1>-->
+
+    
+
+<script src="todo.js"></script>
+</body>
+  
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <link rel="stylesheet" href="weather.css">
+</head>
+  
+<body>
+<h1 id="title">North Ogden Weather</h1>
+
+<div id="stats">
+    <li><b>Currently:</b> <span id="current_temp"></span>&deg;F<br></li>
+    <li><b>Feels like:</b> <span id="feels_like"></span>&deg;F<br></li>
+    <li><b>Description:</b> <span id="description"></span><br></li>
+    <li><b>Humidity:</b> <span id="humidity"></span>%<br></li>
+</div>
+
+    <script>
+
+let cityID = 5604473;
+let appid = 'e116f1daaa18ec188a8f9cad320d03eb';
+const apiURL2 = `https://api.openweathermap.org/data/2.5/onecall?lat=41.3072&lon=-111.9602&units=imperial&appid=${appid}`;
+  fetch(apiURL2)
+    .then((response2) => response2.json())
+    .then((jsObject2) => {
+        //console.log(jsObject2);
+        
+        console.log(jsObject2.current.temp.toFixed(0));
+        console.log(jsObject2.current.feels_like.toFixed(0));
+        console.log(jsObject2.current.weather[0].description);
+        console.log(jsObject2.current.humidity);
+
+        document.getElementById('current_temp').textContent = jsObject2.current.temp.toFixed(0);
+        document.getElementById('feels_like').textContent = jsObject2.current.feels_like.toFixed(0);
+        document.getElementById('description').textContent = jsObject2.current.weather[0].description;
+        document.getElementById('humidity').textContent = jsObject2.current.humidity;
+    });
+</script>
+</body>
+</html>
